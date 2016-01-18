@@ -28,8 +28,8 @@
                 //$("#country-taiwan").html('<a class="language-link active" xml:lang="zh-hant" href="/zh-hant">繁體中文</a>');
                 //$("#country-japan").html('<a class="language-link" xml:lang="ja" href="/jp">日本語</a>');
 
-                $(".menu-block-1 ul li:nth-last-child(2)").html('<a class="language-link active" xml:lang="zh-hant" href="/zh-hant">繁體中文</a>');
-                $(".menu-block-1 ul li:nth-last-child(1)").html('<a class="language-link" xml:lang="ja" href="/jp">日本語</a>');
+                $(".menu-block-1 ul li:nth-last-child(2)").html('<a class="language-link active" xml:lang="zh-hant" href="/zh-hant">繁體中文/Traditional</a>');
+                $(".menu-block-1 ul li:nth-last-child(1)").html('<a class="language-link" xml:lang="ja" href="/jp">日本語/Japanese</a>');
                 $(".view-products .views-row ,.view-lastest-news .views-row").addClass("animated fadeIn");
 
                 $(window).unload(function() {
