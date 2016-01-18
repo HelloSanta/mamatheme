@@ -1,0 +1,105 @@
+//background
+//
+.not-front{
+    background: #ffffff;
+    #page {
+        background: #ffff01;
+        #content {
+            background: #ffff02;
+        }
+    }
+}
+
+#footer {
+    background: #ffff05;
+}
+
+body {
+    #header {
+        background: #ffff03;
+    }
+    #page {
+        #content {}
+    }
+}
+
+//color
+//
+body {
+    h1 {
+        color: #cccccc;
+        a {
+            color: #cccccc!important;
+        }
+    }
+    h2 {
+        color: #cccc01;
+        a {
+            color: #cccc01!important;
+        }
+    }
+    #header {
+        a {
+            color: #cccc02
+        }
+    }
+    #page {
+        #content {
+            color: #cccc03;
+            a {
+                color: #cccc04;
+            }
+        }
+    }
+}
+
+#footer,
+.region-bottom,
+#block-block-1 {
+    color: #cccc05;
+    a {
+        color: #cccc06;
+    }
+}
+
+//hover ,active
+body {
+    #header {
+        a {}
+        .active-trail,
+        a:hover {
+            color: #aaaa01;
+            a {
+                color: #aaaa01;
+            }
+        }
+    }
+    #page {
+        #content {
+            a {}
+            a:hover {
+                color: #aaaa02;
+            }
+            .view-filters {
+                a {}
+                a.active {
+                    color: #aaaa02;
+                }
+            }
+            h2 {
+                a {}
+                a:hover {
+                    color: #aaaa02!important;
+                }
+            }
+        }
+    }
+    #footer,
+    .region-bottom,
+    #block-block-1 {
+        a {}
+        a:hover {
+            color: #aaaa03;
+        }
+    }
+}

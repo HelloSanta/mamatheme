@@ -1,0 +1,773 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+
+@import "normalize";
+
+/* Layout rules */
+
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+
+
+/* @import "theme-A"; */
+
+
+/* @import "theme-B"; */
+
+html {}
+
+body {
+    font-family: Helvetica, Arial, "微軟正黑體";
+}
+
+.ui-timepicker-wrapper {
+    //display: none!important;
+}
+
+.click-time {
+    display: none!important;
+}
+
+.page-products,
+.page-lastest-news,
+{
+    #page-title {
+        display: none;
+    }
+}
+
+#page-title {
+    text-align: center;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    line-height: 2.5em;
+}
+
+h3 {
+    font-size: 12px;
+    color: #9ba4a9;
+}
+
+p {
+    line-height: 2.5em;
+    //margin:0px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: auto!important;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.ui-timepicker-wrapper {
+    width: 100%;
+}
+
+//清除浮動---------------------------------------------------
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//絕對位置置中
+@mixin ab-center($trans-width, $trans-height) {
+    position: absolute;
+    left: 50%!important;
+    top: 50%!important;
+    -ms-transform: translate($trans-width, $trans-height)!important;
+    -webkit-transform: translate($trans-width, $trans-height)!important;
+    transform: translate($trans-width, $trans-height)!important;
+}
+
+//img zoom large
+@mixin zoom-large($trans-size) {
+    overflow: hidden;
+    img {
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        display: -webkit-flex;
+        display: flex;
+    }
+    img:hover {
+        -webkit-transform: scale($trans-size);
+        transform: scale($trans-size);
+        display: -webkit-flex;
+        display: flex;
+    }
+}
+
+//Responsive-menu
+.mean-bar {
+    background-color: #ffffff!important;
+    position: fixed!important;
+    top: 50px;
+    box-shadow: 1px 3px 0 3px rgba(255, 255, 255, 0.63);
+    a {
+        color: #747474!important;
+        font-size: 12px;
+    }
+    .meanmenu-reveal {
+        width: 100%!important;
+        padding-right: 0px!important;
+        text-align: center;
+        .toger {
+            box-sizing: border-box;
+            padding: 0 15px;
+            line-height: 35px;
+            #toger-left {
+                float: left;
+                width: 90%;
+                height: 35px;
+                box-sizing: border-box;
+                border: 1px solid #dadada;
+                text-align: left;
+                a {
+                    padding-left: 15px!important;
+                }
+            }
+            #toger-right {
+                box-sizing: border-box;
+                float: right;
+                width: 10%;
+                height: 35px;
+                border: 1px solid #dadada;
+            }
+        }
+    }
+    .mean-nav {
+        background: #ffffff!important;
+        margin-bottom: 5px;
+        li {
+            box-sizing: border-box;
+            padding: 0px 15px;
+        }
+        a {
+            width: 100%!important;
+            box-sizing: border-box;
+            padding: 15px 0px!important;
+            border-bottom: 1px solid #dadada;
+            border-left: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+        }
+        a:before {
+            content: "";
+            float: left;
+            display: block;
+            width: 15px;
+            height: 1px;
+        }
+    }
+}
+
+//首頁背景圖
+.front {
+    // background: url("/sites/default/files/home.jpg") no-repeat fixed;
+    // background-position: center;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    // .block {
+    //     margin: 0px;
+    // }
+    #content-top {
+        //首頁企業夥伴區塊
+        .company-block {
+            margin: 0px;
+            position: absolute;
+            bottom: 64px;
+            left: 0px;
+            width: 100%;
+           
+            z-index: 200;
+            background: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            padding: 15px;
+            .wrapper {
+                max-width: 1200px;
+                margin: 0 auto;
+                ul {
+                    display: -webkit-flex;
+                    display: -ms-flex;
+                    display: flex;
+                    -webkit-justify-content: space-between;
+                    -ms-justify-content: space-between;
+                    justify-content: space-between;
+                    -webkit-align-content: center;
+                    -ms-align-content: center;
+                    align-content: center;
+                     min-height: 80px;
+                    .item-list {
+                        display: inline-block;
+                        padding: 10px;
+                        //height: 0px;
+                    }
+                }
+                img {
+                    float: left;
+                    max-width: 130px;
+                }
+            }
+        }
+        //首頁footer區塊
+        #block-block-1 {
+            position: absolute;
+            bottom: 0px;
+            z-index: 200;
+            margin: 0px;
+            padding: 20px;
+            background: #000000;
+            .footer-wrape {
+                #footer_left {
+                    padding: 0px!important;
+                }
+                #footer_right {
+                    padding: 0px!important;
+                }
+            }
+        }
+    }
+    #page {
+        display: none;
+        #main {
+            #content {}
+        }
+    }
+    #footer {}
+}
+
+.not-front {
+    background: #ededed;
+    #page {
+        //background: #ffffff;
+    }
+}
+
+//登入之後menu會被遮住fix
+.logged-in {
+    #header {
+        top: 30px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    #header {
+        background: #ffffff;
+        box-shadow: 1px 3px 0 3px rgba(255, 255, 255, 0.63);
+        width: 100%;
+        position: fixed;
+        z-index: 300;
+        top: 0;
+        .header-wrape {
+            //max-width: 1200px;
+            height: 60px;
+            margin: 0 auto;
+            //logo
+            #logo {
+                padding: 15px 0px;
+            }
+            //頁首選單
+            #block-menu-block-1 {
+                position: absolute;
+                z-index: 300;
+                right: 0px;
+                top: 50%;
+                -ms-transform: translate(0%, -50%);
+                -webkit-transform: translate(0%, -50%);
+                transform: translate(0%, -50%);
+                .menu {
+                    .menu__item {
+                        position: relative;
+                        display: inline-block;
+                        box-sizing: border-box;
+                        padding: 0 15px;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    #content-top {
+        .content-top-wrape {
+            position: relative;
+            //max-width: 1600px;
+            margin: 0 auto;
+            margin-top: 30px;
+            //首頁Logo區塊
+            #block-imageblock-1 {
+                @include ab-center (-50%, -50%);
+                img {
+                    width: auto;
+                }
+            }
+            #block-imageblock-3 {
+                @include ab-center (-50%, -50%);
+                max-width: 150px;
+                width: 20%;
+                z-index: 200;
+                img {
+                    //width: 80%;
+                }
+            }
+            //slideshow區塊
+            #block-views-template-slideshow-block {
+                margin: 0px;
+            }
+            //banner圖
+            #block-imageblock-2 {
+                overflow: hidden;
+                img {
+                    min-width: 1440px;
+                    min-height: 320px;
+                }
+            }
+            //banner中間logo
+            #block-imageblock-3 {
+                @include ab-center (-50%, -50%);
+            }
+            //首頁footer區塊
+            #block-block-1 {
+                position: absolute;
+                bottom: 0px;
+                z-index: 200;
+                margin: 0px;
+                box-sizing: border-box;
+                padding: 20px;
+                .footer-wrape {
+                    @extend %clearfix;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #page {
+        position: relative;
+        max-width: 1440px;
+        #navigation {
+            display: none;
+        }
+        #main {
+            padding: 0px;
+            overflow: hidden;
+            #content {
+                position: relative;
+                @extend %clearfix;
+                //最新消息分類頁-------------------------------------------------------------------------------------------------------------------------------------------------
+                .view-lastest-news {
+                    .view-header {
+                        text-align: center;
+                    }
+                    .view-filters {
+                        border-top: 1px solid;
+                        border-bottom: 1px solid;
+                        margin-bottom: 30px;
+                        margin-top: 10px;
+                        .views-exposed-form {
+                            #edit-tid-wrapper {
+                                width: 100%;
+                                .views-widget {
+                                    text-align: center;
+                                    .form-item {
+                                        display: inline-block;
+                                        font-size: 0px;
+                                        a {
+                                            display: block;
+                                            width: 100px;
+                                        }
+                                        #edit-field-news-taxonomy-target-id-all {
+                                            border: none;
+                                        }
+                                        .form-type-bef-link {
+                                            box-sizing: border-box;
+                                            padding: 10px;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .views-submit-button {
+                            display: none;
+                        }
+                    }
+                    .view-content {
+                        overflow: hidden;
+                        .views-row {
+                            @include zoom-large(1.1);
+                            .views-field-body,
+                            .views-field-nid {
+                                display: none;
+                            }
+                            .views-field-field-image {
+                                position: relative;
+                                overflow: hidden;
+                                #taxnonmy {
+                                    background-color: black;
+                                    color: #ffffff;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    padding: 5px;
+                                }
+                                #createdate {
+                                    background-color: black;
+                                    color: #ffffff;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                //作品集分類頁---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                .view-products {
+                    position: relative;
+                    .view-header {
+                        text-align: center;
+                    }
+                    .view-filters {
+                        margin-bottom: 30px;
+                        margin-top: 10px;
+                        border-top: 1px solid;
+                        border-bottom: 1px solid;
+                        .views-exposed-form {
+                            #edit-tid-wrapper {
+                                width: 100%;
+                                .views-widget {
+                                    text-align: center;
+                                    .form-item {
+                                        display: inline-block;
+                                        font-size: 0px;
+                                        a {
+                                            display: block;
+                                            width: 100px;
+                                        }
+                                        #edit-tid-all {
+                                            border: none;
+                                        }
+                                        .form-type-bef-link {
+                                            box-sizing: border-box;
+                                            padding: 10px;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .views-submit-button {
+                            display: none;
+                        }
+                    }
+                    .view-content {
+                        overflow: hidden;
+                        .views-row {
+                            text-align: center;
+                            .views-field-title {
+                                a {
+                                    font-size: 16px;
+                                }
+                            }
+                            .views-field-field-image {
+                                @include zoom-large(1.1);
+                            }
+                        }
+                    }
+                }
+                //關於我們---------------------------------------------------------------------------------------------------------------------------------------------
+                .node-about-us {}
+                //聯絡我們-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                /*聯絡我們node*/
+                .view-twmplate-contact-us {
+                    @extend %clearfix;
+                    box-sizing: border-box;
+                    //padding: 0px 40px 40px 40px;
+                }
+                //web-from
+                /*#block-webform-client-block-24 {
+                    @extend %clearfix;
+                    position: relative;
+                    .form-item {
+                        clear: both;
+                        margin: 0px 0px 24px 0px;
+                        &:nth-child(1) {
+                            width: 50%;
+                            float: left;
+                            @extend %clearfix;
+                            clear: none;
+                            box-sizing: border-box;
+                            margin: 24px 0px;
+                            padding-right: 20px;
+                        }
+                        &:nth-child(2) {
+                            width: 50%;
+                            float: left;
+                            @extend %clearfix;
+                            clear: none;
+                            margin: 24px 0px;
+                            box-sizing: border-box;
+                            padding-left: 20px;
+                        }
+                        input {
+                            padding: 10px;
+                            background: none;
+                            border: 1px solid;
+                            width: 100%;
+                        }
+                        textarea {
+                            padding: 10px;
+                            background: none;
+                            border: 1px solid;
+                        }
+                    }
+                    .webform-component-date {
+                        .form-item {
+                            margin: 0px 0px 24px 0px;
+                        }
+                        .form-item-submitted-date-month {
+                            @extend %clearfix;
+                            #edit-submitted-date-month {
+                                width: 100%;
+                                border: 1px solid;
+                                background: #ffffff;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                        .form-item-submitted-date-day {
+                            #edit-submitted-date-day {
+                                width: 100%;
+                                border: 1px solid;
+                                background: #ffffff;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    .webform-component-time {
+                      .form-item{
+                        margin: 0px;
+                        display: inline-block;
+                        float: left;
+                      }
+                    }
+                    .form-actions {
+                        .webform-submit {
+                            width: 100%;
+                            padding: 10px 0px;
+                            background: #000000;
+                            color: #ffffff;
+                        }
+                    }
+                }*/
+                #block-webform-client-block-24 {
+                    position: relative;
+                    //text-align: center;
+                    @extend %clearfix;
+                    input {
+                        width: 100%;
+                        padding: 10px;
+                        background: none;
+                        border: 1px solid;
+                        padding: 10px;
+                        box-sizing: border-box;
+                    }
+                    textarea {
+                        background: none;
+                        border: 1px solid;
+                        padding: 10px;
+                        box-sizing: border-box;
+                    }
+                    select {
+                        background: none;
+                        border: 1px solid;
+                    }
+                    .webform-component {
+                        &:nth-child(1) {
+                            width: 50%;
+                            float: left;
+                            box-sizing: border-box;
+                            padding: 10px;
+                        }
+                        &:nth-child(2) {
+                            width: 50%;
+                            float: left;
+                            box-sizing: border-box;
+                            padding: 10px;
+                        }
+                    }
+                    .webform-component--date {
+                        display: inline-block;
+                        padding: 0px 10px;
+                        margin: 0px;
+                        margin-bottom: 24px;
+                        //margin-bottom: 12px;
+                        box-sizing: border-box;
+                        select {
+                            padding: 10px;
+                            box-sizing: border-box;
+                        }
+                    }
+                    .webform-component-time {
+                        @extend .webform-component--date;
+                    }
+                    .webform-component-textarea {
+                        margin-top: 0px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                    }
+                    .form-actions {
+                        input {
+                            max-width: 500px;
+                            margin: 0 auto;
+                            background: #000000;
+                            color: #ffffff;
+                        }
+                    }
+                }
+                /*地圖區塊*/
+                #block-views-twmplate-contact-us-block-1 {
+                    @extend %clearfix;
+                    margin-top: 20px;
+                    position: relative;
+                    * {
+                        width: 100%;
+                    }
+                }
+                //關於我們-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                .node-about-us {}
+                .form-actions {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    //首頁footer,banner-footer------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    .region-bottom {
+        position: relative;
+        #block-block-1 {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            .footer-wrape {
+                #footer_left {
+                    padding: 10px 10px;
+                }
+                #footer_right {
+                    font-size: 20px;
+                    div {
+                        a {
+                            padding: 10px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    //background-color: #ccc;
+    text-align: center;
+    #block-block-2 {
+        margin: 0;
+        #footer-wrape {
+            div {
+                display: inline-block;
+                padding: 20px 20px;
+            }
+        }
+    }
+    #block-multiblock-1 {
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .footer-wrape {
+            #footer_left {
+                display: inline-block;
+                padding-top: 5px;
+            }
+            #footer_right {
+                font-size: 20px;
+                padding-top: 5px;
+                .item {
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        margin-left: -18px;
+                        height: 25px;
+                        width: 1px;
+                        background: #ffffff;
+                    }
+                    &:first-child {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+                a:hover {
+                    //color: blue;
+                }
+            }
+        }
+    }
+}

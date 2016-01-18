@@ -1,0 +1,93 @@
+/* line 3, colors.scss */
+.not-front {
+  background: #ffffff;
+}
+/* line 5, colors.scss */
+.not-front #page {
+  background: #ffff01;
+}
+/* line 7, colors.scss */
+.not-front #page #content {
+  background: #ffff02;
+}
+
+/* line 13, colors.scss */
+#footer {
+  background: #ffff05;
+}
+
+/* line 18, colors.scss */
+body #header {
+  background: #ffff03;
+}
+
+/* line 29, colors.scss */
+body h1 {
+  color: #cccccc;
+}
+/* line 31, colors.scss */
+body h1 a {
+  color: #cccccc !important;
+}
+/* line 35, colors.scss */
+body h2 {
+  color: #cccc01;
+}
+/* line 37, colors.scss */
+body h2 a {
+  color: #cccc01 !important;
+}
+/* line 42, colors.scss */
+body #header a {
+  color: #cccc02;
+}
+/* line 47, colors.scss */
+body #page #content {
+  color: #cccc03;
+}
+/* line 49, colors.scss */
+body #page #content a {
+  color: #cccc04;
+}
+
+/* line 58, colors.scss */
+#footer,
+.region-bottom,
+#block-block-1 {
+  color: #cccc05;
+}
+/* line 60, colors.scss */
+#footer a,
+.region-bottom a,
+#block-block-1 a {
+  color: #cccc06;
+}
+
+/* line 70, colors.scss */
+body #header .active-trail,
+body #header a:hover {
+  color: #aaaa01;
+}
+/* line 72, colors.scss */
+body #header .active-trail a,
+body #header a:hover a {
+  color: #aaaa01;
+}
+/* line 80, colors.scss */
+body #page #content a:hover {
+  color: #aaaa02;
+}
+/* line 85, colors.scss */
+body #page #content .view-filters a.active {
+  color: #aaaa02;
+}
+/* line 91, colors.scss */
+body #page #content h2 a:hover {
+  color: #aaaa02 !important;
+}
+/* line 101, colors.scss */
+body #footer a:hover,
+body .region-bottom a:hover,
+body #block-block-1 a:hover {
+  color: #aaaa03;
+}

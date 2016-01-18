@@ -1,0 +1,1038 @@
+@charset "UTF-8";
+/**
+ * @file
+ * RTL companion for the styles.scss file.
+ */
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* HTML element (SMACSS base) rules */
+/**
+ * @file
+ * Normalize-rtl.scss is the RTL language extension of normalize.scss
+ */
+/**
+ * Lists
+ */
+/* line 9, ../sass/_normalize-rtl.scss */
+dd {
+  margin: 0 30px 0 0;
+}
+
+/* Address paddings set differently in IE 6/7. */
+/* line 16, ../sass/_normalize-rtl.scss */
+menu,
+ol,
+ul {
+  padding: 0 30px 0 0;
+}
+
+/* Layout rules */
+/**
+ * @file
+ * RTL companion for the layout-responsive.css file.
+ */
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/**
+ * Use 3 grid columns for smaller screens.
+ */
+@media all and (min-width: 480px) and (max-width: 959px) {
+ /**
+* The layout when there is only one sidebar, the left one.
+*/
+  /* line 77, ../sass/layouts/_responsive.scss */
+  .sidebar-first {
+    /* Span 2 columns, starting in 2nd column from left. */
+    /* Span 1 column, starting in 1st column from left. */
+  }
+  /* line 79, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content {
+    float: right;
+    width: 66.66667%;
+    margin-right: 33.33333%;
+    margin-left: -100%;
+  }
+  /* line 83, ../sass/layouts/_responsive.scss */
+  .sidebar-first .region-sidebar-first {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+
+ /**
+* The layout when there is only one sidebar, the right one.
+*/
+  /* line 90, ../sass/layouts/_responsive.scss */
+  .sidebar-second {
+    /* Span 2 columns, starting in 1st column from left. */
+    /* Span 1 column, starting in 3rd column from left. */
+  }
+  /* line 92, ../sass/layouts/_responsive.scss */
+  .sidebar-second #content {
+    float: right;
+    width: 66.66667%;
+    margin-right: 0%;
+    margin-left: -66.66667%;
+  }
+  /* line 96, ../sass/layouts/_responsive.scss */
+  .sidebar-second .region-sidebar-second {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+
+ /**
+* The layout when there are two sidebars.
+*/
+  /* line 103, ../sass/layouts/_responsive.scss */
+  .two-sidebars {
+    /* Span 2 columns, starting in 2nd column from left. */
+    /* Span 1 column, starting in 1st column from left. */
+    /* Start a new row and span all 3 columns. */
+  }
+  /* line 105, ../sass/layouts/_responsive.scss */
+  .two-sidebars #content {
+    float: right;
+    width: 66.66667%;
+    margin-right: 33.33333%;
+    margin-left: -100%;
+  }
+  /* line 109, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-first {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+  }
+  /* line 113, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-second {
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    clear: right;
+    /* Apply the shared properties of grid items in a single, efficient ruleset. */
+    /* Span 1 column, starting in the 1st column from left. */
+    /* Span 1 column, starting in the 2nd column from left. */
+    /* Span 1 column, starting in the 3rd column from left. */
+  }
+  /* line 118, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-second .block {
+    padding-left: 12px;
+    padding-right: 12px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 122, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -33.33333%;
+    clear: right;
+  }
+  /* line 127, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
+  }
+  /* line 131, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
+    float: right;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
+  }
+}
+/**
+ * Use 5 grid columns for larger screens.
+ */
+@media all and (min-width: 960px) {
+ /**
+* The layout when there is only one sidebar, the left one.
+*/
+  /* line 148, ../sass/layouts/_responsive.scss */
+  .sidebar-first {
+    /* Span 4 columns, starting in 2nd column from left. */
+    /* Span 1 column, starting in 1st column from left. */
+  }
+  /* line 150, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content {
+    float: right;
+    width: 80%;
+    margin-right: 20%;
+    margin-left: -100%;
+  }
+  /* line 154, ../sass/layouts/_responsive.scss */
+  .sidebar-first .region-sidebar-first {
+    float: right;
+    width: 20%;
+    margin-right: 0%;
+    margin-left: -20%;
+  }
+
+ /**
+* The layout when there is only one sidebar, the right one.
+*/
+  /* line 161, ../sass/layouts/_responsive.scss */
+  .sidebar-second {
+    /* Span 4 columns, starting in 1st column from left. */
+    /* Span 1 column, starting in 5th column from left. */
+  }
+  /* line 163, ../sass/layouts/_responsive.scss */
+  .sidebar-second #content {
+    float: right;
+    width: 80%;
+    margin-right: 0%;
+    margin-left: -80%;
+  }
+  /* line 167, ../sass/layouts/_responsive.scss */
+  .sidebar-second .region-sidebar-second {
+    float: right;
+    width: 20%;
+    margin-right: 80%;
+    margin-left: -100%;
+  }
+
+ /**
+* The layout when there are two sidebars.
+*/
+  /* line 174, ../sass/layouts/_responsive.scss */
+  .two-sidebars {
+    /* Span 3 columns, starting in 2nd column from left. */
+    /* Span 1 column, starting in 1st column from left. */
+    /* Span 1 column, starting in 5th column from left. */
+  }
+  /* line 176, ../sass/layouts/_responsive.scss */
+  .two-sidebars #content {
+    float: right;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: -80%;
+  }
+  /* line 180, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-first {
+    float: right;
+    width: 20%;
+    margin-right: 0%;
+    margin-left: -20%;
+  }
+  /* line 184, ../sass/layouts/_responsive.scss */
+  .two-sidebars .region-sidebar-second {
+    float: right;
+    width: 20%;
+    margin-right: 80%;
+    margin-left: -100%;
+  }
+}
+@media all and (min-width: 480px) {
+  /* line 232, ../sass/layouts/_responsive.scss */
+  .front #page #footer {
+    bottom: 0px;
+  }
+
+  /* line 239, ../sass/layouts/_responsive.scss */
+  body #header .header-wrape {
+    position: relative;
+  }
+  /* line 241, ../sass/layouts/_responsive.scss */
+  body #header .header-wrape #logo {
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    top: 50%;
+    -ms-transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+  }
+  /* line 257, ../sass/layouts/_responsive.scss */
+  body #page #main #content {
+    padding: 0 30px 30px 30px;
+  }
+}
+@media all and (min-width: 960px) {
+  /* line 294, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* line 298, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* line 303, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_left {
+    float: left;
+    padding-left: 30px;
+  }
+  /* line 307, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
+    float: right;
+    padding-right: 30px;
+  }
+  /* line 310, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
+    float: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+
+  /* line 325, ../sass/layouts/_responsive.scss */
+  #page #main #content {
+    /*聯絡我們node*/
+    /*地圖區塊*/
+  }
+  /* line 331, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row-first {
+    width: 100% !important;
+  }
+  /* line 333, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row-first .views-field-title {
+    font-size: 22px !important;
+  }
+  /* line 336, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row-first .views-field-field-image {
+    width: 45%;
+    float: left;
+    margin-right: 20px;
+  }
+  /* line 342, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row-first .views-field-body,
+  #page #main #content .view-lastest-news .view-content .views-row-first .views-field-nid {
+    display: block !important;
+  }
+  /* line 346, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 347, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row .views-field-title {
+    font-size: 12px;
+  }
+  /* line 208, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row:nth-child(3n +1) {
+    margin-right: 0;
+  }
+  /* line 359, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 197, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 366, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-twmplate-contact-us {
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 370, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-twmplate-contact-us .view-content .views-row .views-field-body {
+    box-sizing: border-box;
+    padding: 0px 40px 40px 40px;
+  }
+  /* line 378, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-webform-client-block-24 {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+  }
+  /* line 382, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-views-twmplate-contact-us-block-1 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /* line 391, ../sass/layouts/_responsive.scss */
+  .region-bottom {
+    width: 100%;
+    max-width: 1200px;
+  }
+  /* line 396, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape #footer_left {
+    float: left;
+  }
+  /* line 399, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape #footer_right {
+    float: right;
+  }
+  /* line 401, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+  }
+
+  /* line 409, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 {
+    max-width: 1200px;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* line 413, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape {
+    max-width: 1200px;
+    margin: 0 auto;
+    bottom: 20px;
+  }
+  /* line 417, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_left {
+    padding-left: 30px;
+    position: absolute;
+    left: 0;
+  }
+  /* line 422, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right {
+    position: absolute;
+    right: 0;
+  }
+  /* line 425, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right div {
+    display: inline-block;
+    float: left;
+    margin: 0px 10px;
+  }
+  /* line 429, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right div a {
+    margin-right: 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 960px) {
+  /* line 445, ../sass/layouts/_responsive.scss */
+  .front #content-top .company-block {
+    bottom: 98px !important;
+  }
+
+  /* line 456, ../sass/layouts/_responsive.scss */
+  #content-top {
+    position: relative;
+  }
+  /* line 460, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* line 464, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 470, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
+    margin-top: 10px;
+  }
+  /* line 472, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px 10px;
+  }
+  /* line 481, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-2 {
+    overflow: hidden;
+  }
+  /* line 483, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-2 img {
+    margin-left: -50%;
+    max-width: 1600px;
+    width: 1600px;
+    min-height: 320px;
+  }
+
+  /* line 498, ../sass/layouts/_responsive.scss */
+  #page #main #content {
+    /*聯絡我們node*/
+    /*地圖區塊*/
+    /*聯絡我們node*/
+    /*地圖區塊*/
+  }
+  /* line 504, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row-first {
+    width: 100% !important;
+    float: left;
+    box-sizing: border-box;
+  }
+  /* line 509, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 208, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row:nth-child(2n +1) {
+    margin-right: 0;
+  }
+  /* line 514, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row-first .views-field-body,
+  #page #main #content .view-lastest-news .view-content .views-row-first .views-field-nid {
+    display: block !important;
+  }
+  /* line 525, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 197, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 532, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-twmplate-contact-us {
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -50%;
+  }
+  /* line 536, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-webform-client-block-24 {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+  }
+  /* line 540, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-views-twmplate-contact-us-block-1 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 546, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-twmplate-contact-us {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 551, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-webform-client-block-24 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 556, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-views-twmplate-contact-us-block-1 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /* line 567, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape {
+    text-align: center;
+  }
+  /* line 571, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+  }
+
+  /* line 579, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 {
+    bottom: 0px;
+    width: 100%;
+  }
+  /* line 582, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape {
+    max-width: 1200px;
+    margin: 0 auto;
+    bottom: 20px;
+  }
+  /* line 586, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_left {
+    padding-left: 25px;
+    position: absolute;
+    left: 0;
+  }
+  /* line 591, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right {
+    position: absolute;
+    right: 0;
+  }
+  /* line 594, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right div {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 15px;
+  }
+  /* line 599, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right div a {
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 767px) {
+  /* line 616, ../sass/layouts/_responsive.scss */
+  .front #content-top .company-block {
+    display: none;
+  }
+
+  /* line 626, ../sass/layouts/_responsive.scss */
+  #header .header-wrape #logo {
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  /* line 631, ../sass/layouts/_responsive.scss */
+  #content-top {
+    position: relative;
+  }
+  /* line 635, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-3 img {
+    margin-top: 110px;
+  }
+  /* line 640, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* line 644, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 650, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
+    margin-top: 10px;
+  }
+  /* line 652, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px 10px;
+  }
+  /* line 661, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-2 {
+    overflow: hidden;
+  }
+  /* line 663, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-2 img {
+    margin-left: -50%;
+    max-width: 1600px;
+    width: 1600px;
+    min-height: 320px;
+  }
+
+  /* line 676, ../sass/layouts/_responsive.scss */
+  #page #main #content {
+    /*聯絡我們node*/
+    /*地圖區塊*/
+  }
+  /* line 682, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row {
+    width: 100%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 208, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row:nth-child(1n +1) {
+    margin-right: 0;
+  }
+  /* line 691, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 197, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 698, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-twmplate-contact-us {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 703, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-webform-client-block-24 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 708, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-views-twmplate-contact-us-block-1 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+
+  /* line 719, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape {
+    width: 100%;
+    text-align: center;
+  }
+  /* line 724, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+  }
+
+  /* line 732, ../sass/layouts/_responsive.scss */
+  #footer #footer_right {
+    margin-top: 10px;
+    margin-left: 45px;
+  }
+  /* line 735, ../sass/layouts/_responsive.scss */
+  #footer #footer_right div {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  /* line 738, ../sass/layouts/_responsive.scss */
+  #footer #footer_right div a {
+    display: inline-block;
+    margin-right: 25px;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 753, ../sass/layouts/_responsive.scss */
+  .front #content-top .company-block {
+    display: none;
+  }
+
+  /* line 763, ../sass/layouts/_responsive.scss */
+  #header .header-wrape #logo {
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  /* line 771, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-3 img {
+    margin-top: 45px;
+  }
+  /* line 776, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* line 780, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 786, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
+    margin-top: 10px;
+  }
+  /* line 788, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px 10px;
+  }
+  /* line 798, ../sass/layouts/_responsive.scss */
+  #content-top .content-top-wrape #block-imageblock-2 img {
+    margin-left: -150%;
+    max-width: 1600px;
+    width: 1600px;
+    min-height: 320px;
+  }
+
+  /* line 811, ../sass/layouts/_responsive.scss */
+  #page #main #content {
+    padding: 0px 20px;
+    /*聯絡我們node*/
+    /*地圖區塊*/
+  }
+  /* line 818, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row {
+    width: 100%;
+    margin-right: 6%;
+    margin-bottom: 6%;
+    float: left;
+  }
+  /* line 208, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-lastest-news .view-content .views-row:nth-child(1n +1) {
+    margin-right: 0;
+  }
+  /* line 828, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row {
+    width: 100%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  /* line 197, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-products .view-content .views-row:nth-child(1n) {
+    margin-right: 0;
+  }
+  /* line 835, ../sass/layouts/_responsive.scss */
+  #page #main #content .view-twmplate-contact-us {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 840, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-webform-client-block-24 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 845, ../sass/layouts/_responsive.scss */
+  #page #main #content #block-views-twmplate-contact-us-block-1 {
+    clear: right;
+    float: right;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  /* line 851, ../sass/layouts/_responsive.scss */
+  #page #main #content .node-about-us img {
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  /* line 861, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape {
+    text-align: center;
+  }
+  /* line 865, ../sass/layouts/_responsive.scss */
+  .region-bottom #block-block-1 .footer-wrape #footer_right div {
+    display: inline-block;
+  }
+
+  /* line 873, ../sass/layouts/_responsive.scss */
+  #footer span {
+    white-space: nowrap;
+  }
+  /* line 877, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape {
+    text-align: center;
+  }
+  /* line 880, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right {
+    margin-top: 10px;
+    margin-left: 45px;
+  }
+  /* line 883, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right div {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  /* line 886, ../sass/layouts/_responsive.scss */
+  #footer #block-multiblock-1 .footer-wrape #footer_right div a {
+    display: inline-block;
+    margin-right: 25px;
+  }
+}
+/* Component (SMACSS module) rules */
+/**
+ * @file
+ * RTL companion for the modular-styles.css file.
+ */
+/**
+ * Branding header.
+ */
+/* Wrapping link for logo. */
+/* line 11, ../sass/components/_misc-rtl.scss */
+.header__logo {
+  float: right;
+}
+
+/* The secondary menu (login, etc.) */
+/* line 16, ../sass/components/_misc-rtl.scss */
+.header__secondary-menu {
+  float: left;
+}
+
+/**
+ * Navigation bar.
+ */
+/* Main menu and secondary menu links and menu block links. */
+/* line 27, ../sass/components/_misc-rtl.scss */
+#navigation .links,
+#navigation .menu {
+  text-align: right;
+}
+/* line 30, ../sass/components/_misc-rtl.scss */
+#navigation .links li,
+#navigation .menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: right;
+  padding: 0 0 0 10px;
+}
+
+/**
+ * Messages.
+ */
+/* line 41, ../sass/components/_misc-rtl.scss */
+.messages, .messages--status, .messages--warning, .messages--error {
+  padding: 10px 50px 10px 10px;
+  background-position: 99% 8px;
+}
+
+/**
+ * Tabs.
+ */
+/* line 58, ../sass/components/_misc-rtl.scss */
+.tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
+.tabs-secondary__tab.is-active {
+  float: right;
+}
+
+/**
+ * Inline styles.
+ */
+/* List of links */
+/* line 77, ../sass/components/_misc-rtl.scss */
+.inline li {
+  /* Bug in Safari causes display: inline to fail. */
+  display: inline-block;
+  padding: 0 0 0 1em;
+}
+
+/* The inline field label used by the Fences.module */
+/* line 84, ../sass/components/_misc-rtl.scss */
+span.field-label {
+  padding: 0 0 0 1em;
+}
+
+/**
+ * "More" links.
+ */
+/* line 91, ../sass/components/_misc-rtl.scss */
+.more-link {
+  text-align: left;
+}
+
+/* line 94, ../sass/components/_misc-rtl.scss */
+.more-help-link {
+  text-align: left;
+}
+
+/* line 97, ../sass/components/_misc-rtl.scss */
+.more-help-link a {
+  background-position: 100% 50%;
+  padding: 1px 20px 1px 0;
+}
+
+/**
+ * Menus.
+ */
+/* line 105, ../sass/components/_misc-rtl.scss */
+.menu__item.is-collapsed {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+}
+
+/**
+ * Comments.
+ */
+/* Nested comments are indented. */
+/* line 117, ../sass/components/_misc-rtl.scss */
+.indented {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+/**
+ * Forms.
+ */
+/* Drupal's default login form block */
+/* line 127, ../sass/components/_misc-rtl.scss */
+#user-login-form {
+  text-align: right;
+}
+
+/* line 132, ../sass/components/_misc-rtl.scss */
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
+  margin-left: 0;
+  margin-right: -20px;
+}
+
+/*
+ * Drupal admin tables.
+ */
+/* line 142, ../sass/components/_misc-rtl.scss */
+form th {
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 0;
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+/* line 155, ../sass/components/_misc-rtl.scss */
+html.js .collapsible .fieldset-legend {
+  background-position: 98% 75%;
+  padding-left: 0;
+  padding-right: 15px;
+}
+/* line 160, ../sass/components/_misc-rtl.scss */
+html.js .collapsed .fieldset-legend {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+  background-position: 98% 50%;
+}
+
+/* SMACSS theme rules */
+/* @import "theme-A-rtl"; */
+/* @import "theme-B-rtl"; */
