@@ -235,7 +235,7 @@ a:focus {
             left: 0px;
             width: 100%;
             z-index: 200;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
             padding: 15px;
             .wrapper {
@@ -248,22 +248,29 @@ a:focus {
                     -webkit-justify-content: space-between;
                     -ms-justify-content: space-between;
                     justify-content: space-between;
-                    -webkit-align-content: center;
-                    -ms-align-content: center;
-                    align-content: center;
-                     min-height: 80px;
+                    -webkit-align-items: center;
+                    -ms-align-items: center;
+                    align-items: center;
+                    min-height: 80px;
                     .item-list {
                         display: inline-block;
                         padding: 10px;
                         //height: 0px;
-                        a{
-                            display: block;
+                        display: -webkit-flex;
+                        display: -ms-flex;
+                        display: flex;
+                        -webkit-align-content: center;
+                        -ms-align-content: center;
+                        align-content: center;
+                        a {
+                            vertical-align: middle;
+                            position: relative;
+                            img {
+                                max-width: 130px;
+                                
+                            }
                         }
                     }
-                }
-                img {
-                  vertical-align:middle;
-                    max-width: 130px;
                 }
             }
         }
