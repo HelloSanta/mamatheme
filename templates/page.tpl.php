@@ -47,7 +47,7 @@
     <?php print render($page['header']); ?>
 </div>
   </header>
-<div id="content-top"><div class="content-top-wrape"><?php print render($page['content-top']); ?></div></div>
+<div id="content-top"><div class="content-top-wrape"><?php print render($page['content-top']); ?><div class="content-top-footer"><?php print render($page['content-footer']); ?></div></div></div>
 
 <div id="page">
 
@@ -119,6 +119,7 @@
   
 
 </div>
+<div class ="footer-wrapper">
 <?php print render($page['footer']); ?>
-
+</div>
 <?php print render($page['bottom']); ?>

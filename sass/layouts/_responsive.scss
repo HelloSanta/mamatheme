@@ -294,7 +294,7 @@ $zen-column-count: 24;
             #block-block-1 {
                 position: absolute;
                 bottom: 0px;
-                width: 100%;
+                //width: 100%;
                 .footer-wrape {
                     position: relative;
                     max-width: 1200px;
@@ -388,52 +388,6 @@ $zen-column-count: 24;
             }
         }
     }
-    .region-bottom {
-        width: 100%;
-        max-width: 1200px;
-        #block-block-1 {
-            .footer-wrape {
-                #footer_left {
-                    float: left;
-                }
-                #footer_right {
-                    float: right;
-                    div {
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-    }
-    #footer {
-        #block-multiblock-1 {
-            max-width: 1200px;
-            bottom: 0px;
-            width: 100%;
-            .footer-wrape {
-                max-width: 1200px;
-                margin: 0 auto;
-                bottom: 20px;
-                #footer_left {
-                    padding-left: 30px;
-                    position: absolute;
-                    left: 0;
-                }
-                #footer_right {
-                    position: absolute;
-                    right: 0;
-                    div {
-                        display: inline-block;
-                        float: left;
-                        margin: 0px 10px;
-                        a {
-                            margin-right: 15px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media all and (min-width: 768px) and (max-width: 960px) {
@@ -443,7 +397,12 @@ $zen-column-count: 24;
         #content-top {
             //code for 企業夥伴
             .company-block {
-                bottom:98px!important;
+                bottom: 105px!important;
+            }
+            .content-top-footer{
+                .icon-menu{
+                    padding-top:0px!important;
+                }
             }
         }
         #page {
@@ -457,26 +416,7 @@ $zen-column-count: 24;
         position: relative;
         .content-top-wrape {
             //banner-footer
-            #block-block-1 {
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                .footer-wrape {
-                    position: relative;
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    text-align: center;
-                    #footer_left {}
-                    #footer_right {
-                        margin-top: 10px;
-                        div {
-                            display: inline-block;
-                            box-sizing: border-box;
-                            padding: 0px 10px;
-                        }
-                    }
-                }
-            }
+            
             //banner圖
             #block-imageblock-2 {
                 overflow: hidden;
@@ -575,36 +515,6 @@ $zen-column-count: 24;
             }
         }
     }
-    #footer {
-        #block-multiblock-1 {
-            bottom: 0px;
-            width: 100%;
-            .footer-wrape {
-                max-width: 1200px;
-                margin: 0 auto;
-                bottom: 20px;
-                #footer_left {
-                    padding-left: 25px;
-                    position: absolute;
-                    left: 0;
-                }
-                #footer_right {
-                    position: absolute;
-                    right: 0;
-                    div {
-                        display: inline-block;
-                        float: left;
-                        box-sizing: border-box;
-                        padding-left: 15px;
-                        a {
-                            margin-right: 20px;
-                            margin-left: 5px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media all and (min-width: 481px) and (max-width: 767px) {
@@ -615,6 +525,11 @@ $zen-column-count: 24;
             //code for 企業夥伴
             .company-block {
                 display: none;
+            }
+            .content-top-footer{
+                .icon-menu{
+                    padding-top:0px!important;
+                }
             }
         }
         #page {
@@ -637,26 +552,7 @@ $zen-column-count: 24;
                 }
             }
             //banner-footer
-            #block-block-1 {
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                .footer-wrape {
-                    position: relative;
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    text-align: center;
-                    #footer_left {}
-                    #footer_right {
-                        margin-top: 10px;
-                        div {
-                            display: inline-block;
-                            box-sizing: border-box;
-                            padding: 0px 10px;
-                        }
-                    }
-                }
-            }
+
             //banner圖
             #block-imageblock-2 {
                 overflow: hidden;
@@ -728,18 +624,14 @@ $zen-column-count: 24;
             }
         }
     }
-    #footer {
-        #footer_right {
-            margin-top: 10px;
-            margin-left: 45px;
-            div {
-                display: inline-block;
-                box-sizing: border-box;
-                a {
-                    display: inline-block;
-                    margin-right: 25px;
-                }
-            }
+    .footer-wrapper {
+        .copyright {
+            float: none!important;
+            text-align: center;
+        }
+        .icon-menu {
+            float: none!important;
+            text-align: center;
         }
     }
 }
@@ -752,6 +644,11 @@ $zen-column-count: 24;
             //code for 企業夥伴
             .company-block {
                 display: none;
+            }
+            .content-top-footer{
+                .icon-menu{
+                    padding-top:0px!important;
+                }
             }
         }
         #page {
@@ -773,26 +670,7 @@ $zen-column-count: 24;
                 }
             }
             //banner-footer
-            #block-block-1 {
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                .footer-wrape {
-                    position: relative;
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    text-align: center;
-                    #footer_left {}
-                    #footer_right {
-                        margin-top: 10px;
-                        div {
-                            display: inline-block;
-                            box-sizing: border-box;
-                            padding: 0px 10px;
-                        }
-                    }
-                }
-            }
+            
             //banner圖
             #block-imageblock-2 {
                 img {
@@ -856,40 +734,14 @@ $zen-column-count: 24;
             }
         }
     }
-    .region-bottom {
-        #block-block-1 {
-            .footer-wrape {
-                text-align: center;
-                #footer_left {}
-                #footer_right {
-                    div {
-                        display: inline-block;
-                    }
-                }
-            }
+    .footer-wrapper {
+        .copyright {
+            float: none!important;
+            text-align: center;
         }
-    }
-    #footer {
-        span {
-            white-space: nowrap;
-        }
-        #block-multiblock-1 {
-            .footer-wrape {
-                text-align: center;
-                #footer_left {}
-                #footer_right {
-                    margin-top: 10px;
-                    margin-left: 45px;
-                    div {
-                        display: inline-block;
-                        box-sizing: border-box;
-                        a {
-                            display: inline-block;
-                            margin-right: 25px;
-                        }
-                    }
-                }
-            }
+        .icon-menu {
+            float: none!important;
+            text-align: center;
         }
     }
 }

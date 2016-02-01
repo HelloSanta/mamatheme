@@ -30,8 +30,83 @@
 
 /* @import "theme-A"; */
 
+@mixin pc-width {
+    @media all and (min-width: 960px) {
+        @content;
+    }
+}
 
-/* @import "theme-B"; */
+//code for pad media
+@mixin pad-width {
+    @media all and (min-width: 768px) and (max-width: 960px) {
+        @content;
+    }
+}
+
+//code for small-pad media style
+@mixin small-pad-width {
+    @media all and (min-width: 481px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+//cod for phone media style
+@mixin phone-width {
+    @media all and (max-width: 480px) {
+        @content;
+    }
+}
+
+//responsive display
+@mixin responsive-display($pc, $pad, $small-pad, $phone) {
+    @include pc-width {
+        display: $pc;
+    }
+    @include pad-width {
+        display: $pad;
+    }
+    @include small-pad-width {
+        display: $small-pad;
+    }
+    @include phone-width {
+        display: $phone;
+    }
+}
+
+//reponsive text-align
+@mixin responsive-text-align($pc, $pad, $small-pad, $phone) {
+    @include pc-width {
+        text-align: $pc;
+    }
+    @include pad-width {
+        text-align: $pad;
+    }
+    @include small-pad-width {
+        text-align: $small-pad;
+    }
+    @include phone-width {
+        text-align: $phone;
+    }
+}
+
+//responsive position
+@mixin responsive-float($pc, $pad, $small-pad, $phone) {
+    @include pc-width {
+        float: $pc;
+    }
+    @include pad-width {
+        float: $pad;
+    }
+    @include small-pad-width {
+        float: $small-pad;
+    }
+    @include phone-width {
+        float: $phone;
+    }
+}
+
+
+
 
 html {}
 
@@ -57,6 +132,10 @@ body {
 
 #page-title {
     text-align: center;
+}
+
+.banner-block {
+    width: 100%;
 }
 
 ul,
@@ -114,6 +193,16 @@ a:focus {
 
 .none {
     display: none;
+}
+
+.pager {
+    padding: 20px 0px;
+}
+
+.icon-none {
+    p {
+        display: none;
+    }
 }
 
 //清除浮動---------------------------------------------------
@@ -221,6 +310,10 @@ a:focus {
 
 //首頁背景圖
 .front {
+
+    .footer-wrapper {
+            display: none!important;
+        }
     // background: url("/sites/default/files/home.jpg") no-repeat fixed;
     // background-position: center;
     // -webkit-background-size: cover;
@@ -234,16 +327,16 @@ a:focus {
         //首頁企業夥伴區塊
         .company-block {
             margin: 0px;
-            position: absolute;
-            bottom: 64px;
+            //position: absolute;
+            bottom: 0px!important;
             left: 0px;
             width: 100%;
             z-index: 200;
             background: rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
-            padding: 15px;
+            //padding: 0px 15px;
             .wrapper {
-                max-width: 1200px;
+                max-width: 1440px;
                 margin: 0 auto;
                 ul {
                     display: -webkit-flex;
@@ -278,19 +371,24 @@ a:focus {
             }
         }
         //首頁footer區塊
-        #block-block-1 {
-            position: absolute;
-            bottom: 0px;
-            z-index: 200;
-            margin: 0px;
-            padding: 20px;
+        
+        .content-top-footer {
             background: #000000;
-            .footer-wrape {
-                #footer_left {
-                    padding: 0px!important;
+            .region-content-footer {
+                width: 100%!important;
+                .copyright {
+                    position: relative!important;
+                    @include responsive-float(left, none, none, none);
+                    margin: 0px;
+                    padding: 10px 15px;
                 }
-                #footer_right {
-                    padding: 0px!important;
+                .icon-menu {
+                    position: relative!important;
+                    //@include responsive-float(right, none, none, none);
+                    //display: none;
+                    margin: 0px;
+                    padding: 10px 15px;
+                    text-align: center;
                 }
             }
         }
@@ -357,6 +455,7 @@ body {
         }
     }
     #content-top {
+        position: relative;
         .content-top-wrape {
             position: relative;
             //max-width: 1600px;
@@ -386,7 +485,7 @@ body {
             #block-imageblock-2 {
                 overflow: hidden;
                 img {
-                    min-width: 1440px;
+                    max-width: 1440px;
                     min-height: 320px;
                 }
             }
@@ -395,16 +494,32 @@ body {
                 @include ab-center (-50%, -50%);
             }
             //首頁footer區塊
-            #block-block-1 {
-                position: absolute;
+            .content-top-footer {
+                //position: absolute;
                 bottom: 0px;
                 z-index: 200;
-                margin: 0px;
-                box-sizing: border-box;
-                padding: 20px;
-                .footer-wrape {
-                    @extend %clearfix;
+                width: 100%;
+                .region-content-footer {
+                    max-width: 1440px;
                     width: 100%;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                    padding: 0 30px;
+                    #block-block-1 {
+                        @include responsive-text-align(left, center, center, center);
+                    }
+                    .icon-menu {
+                        @include responsive-text-align(right, center, center, center);
+                        .menu {
+                            li {
+                                display: inline-block;
+                                padding: 0 10px;
+                                a {
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -735,49 +850,100 @@ body {
     }
 }
 
-#footer {
-    position: relative;
-    //background-color: #ccc;
-    text-align: center;
-    #block-block-2 {
-        margin: 0;
-        #footer-wrape {
-            div {
-                display: inline-block;
-                padding: 20px 20px;
-            }
+// #footer {
+//     position: relative;
+//     //background-color: #ccc;
+//     text-align: center;
+//     #block-block-2 {
+//         margin: 0;
+//         #footer-wrape {
+//             div {
+//                 display: inline-block;
+//                 padding: 20px 20px;
+//             }
+//         }
+//     }
+//     .copyright{
+//         float:left;
+//     }
+//     .icon-menu{
+//         float:right;
+//         .menu{
+//             li{
+//                 display: inline-block;
+//                 padding:0px 10px;
+//             }
+//         }
+//     }
+//     // #block-multiblock-1 {
+//     //     display: inline-block;
+//     //     padding-top: 10px;
+//     //     padding-bottom: 10px;
+//     //     .footer-wrape {
+//     //         #footer_left {
+//     //             display: inline-block;
+//     //             padding-top: 5px;
+//     //         }
+//     //         #footer_right {
+//     //             font-size: 20px;
+//     //             padding-top: 5px;
+//     //             .item {
+//     //                 &:before {
+//     //                     content: "";
+//     //                     display: block;
+//     //                     position: absolute;
+//     //                     margin-left: -18px;
+//     //                     height: 25px;
+//     //                     width: 1px;
+//     //                     background: #ffffff;
+//     //                 }
+//     //                 &:first-child {
+//     //                     &:before {
+//     //                         display: none;
+//     //                     }
+//     //                 }
+//     //             }
+//     //             a:hover {
+//     //                 //color: blue;
+//     //             }
+//     //         }
+//     //     }
+//     // }
+// }
+.footer-wrapper {
+    background: #ccc;
+    padding: 10px 0px;
+    #footer {
+        max-width: 1440px;
+        margin: 0 auto;
+        .copyright {
+            float: left;
+            padding: 10px;
+            margin: 0px;
         }
-    }
-    #block-multiblock-1 {
-        display: inline-block;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        .footer-wrape {
-            #footer_left {
-                display: inline-block;
-                padding-top: 5px;
-            }
-            #footer_right {
-                font-size: 20px;
-                padding-top: 5px;
-                .item {
-                    &:before {
+        .icon-menu {
+            float: right;
+            margin: 0px;
+            .menu {
+                li {
+                    display: inline-block;
+                    padding: 10px;
+                    position: relative;
+                    &:after {
                         content: "";
-                        display: block;
-                        position: absolute;
-                        margin-left: -18px;
-                        height: 25px;
                         width: 1px;
+                        height: 60%;
+                        display: block;
                         background: #ffffff;
+                        position: absolute;
+                        top: 20%;
+                        left: -2px;
                     }
                     &:first-child {
-                        &:before {
+                        &:after {
                             display: none;
                         }
                     }
-                }
-                a:hover {
-                    //color: blue;
                 }
             }
         }

@@ -270,7 +270,6 @@ ul {
   #content-top .content-top-wrape #block-block-1 {
     position: absolute;
     bottom: 0px;
-    width: 100%;
   }
   /* line 298, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-block-1 .footer-wrape {
@@ -372,97 +371,26 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-
-  /* line 391, ../sass/layouts/_responsive.scss */
-  .region-bottom {
-    width: 100%;
-    max-width: 1200px;
-  }
-  /* line 396, ../sass/layouts/_responsive.scss */
-  .region-bottom #block-block-1 .footer-wrape #footer_left {
-    float: left;
-  }
-  /* line 399, ../sass/layouts/_responsive.scss */
-  .region-bottom #block-block-1 .footer-wrape #footer_right {
-    float: right;
-  }
-  /* line 401, ../sass/layouts/_responsive.scss */
-  .region-bottom #block-block-1 .footer-wrape #footer_right div {
-    display: inline-block;
-  }
-
-  /* line 409, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 {
-    max-width: 1200px;
-    bottom: 0px;
-    width: 100%;
-  }
-  /* line 413, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape {
-    max-width: 1200px;
-    margin: 0 auto;
-    bottom: 20px;
-  }
-  /* line 417, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_left {
-    padding-left: 30px;
-    position: absolute;
-    left: 0;
-  }
-  /* line 422, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right {
-    position: absolute;
-    right: 0;
-  }
-  /* line 425, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right div {
-    display: inline-block;
-    float: left;
-    margin: 0px 10px;
-  }
-  /* line 429, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right div a {
-    margin-right: 15px;
-  }
 }
 @media all and (min-width: 768px) and (max-width: 960px) {
-  /* line 445, ../sass/layouts/_responsive.scss */
+  /* line 399, ../sass/layouts/_responsive.scss */
   .front #content-top .company-block {
-    bottom: 98px !important;
+    bottom: 105px !important;
+  }
+  /* line 403, ../sass/layouts/_responsive.scss */
+  .front #content-top .content-top-footer .icon-menu {
+    padding-top: 0px !important;
   }
 
-  /* line 456, ../sass/layouts/_responsive.scss */
+  /* line 415, ../sass/layouts/_responsive.scss */
   #content-top {
     position: relative;
   }
-  /* line 460, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-  }
-  /* line 464, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  /* line 470, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
-    margin-top: 10px;
-  }
-  /* line 472, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0px 10px;
-  }
-  /* line 481, ../sass/layouts/_responsive.scss */
+  /* line 421, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-2 {
     overflow: hidden;
   }
-  /* line 483, ../sass/layouts/_responsive.scss */
+  /* line 423, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-2 img {
     margin-left: -50%;
     max-width: 1600px;
@@ -470,20 +398,20 @@ ul {
     min-height: 320px;
   }
 
-  /* line 498, ../sass/layouts/_responsive.scss */
+  /* line 438, ../sass/layouts/_responsive.scss */
   #page #main #content {
     /*聯絡我們node*/
     /*地圖區塊*/
     /*聯絡我們node*/
     /*地圖區塊*/
   }
-  /* line 504, ../sass/layouts/_responsive.scss */
+  /* line 444, ../sass/layouts/_responsive.scss */
   #page #main #content .view-lastest-news .view-content .views-row-first {
     width: 100% !important;
     float: left;
     box-sizing: border-box;
   }
-  /* line 509, ../sass/layouts/_responsive.scss */
+  /* line 449, ../sass/layouts/_responsive.scss */
   #page #main #content .view-lastest-news .view-content .views-row {
     width: 49%;
     margin-right: 2%;
@@ -494,12 +422,12 @@ ul {
   #page #main #content .view-lastest-news .view-content .views-row:nth-child(2n +1) {
     margin-right: 0;
   }
-  /* line 514, ../sass/layouts/_responsive.scss */
+  /* line 454, ../sass/layouts/_responsive.scss */
   #page #main #content .view-lastest-news .view-content .views-row-first .views-field-body,
   #page #main #content .view-lastest-news .view-content .views-row-first .views-field-nid {
     display: block !important;
   }
-  /* line 525, ../sass/layouts/_responsive.scss */
+  /* line 465, ../sass/layouts/_responsive.scss */
   #page #main #content .view-products .view-content .views-row {
     width: 49%;
     margin-right: 2%;
@@ -510,21 +438,21 @@ ul {
   #page #main #content .view-products .view-content .views-row:nth-child(2n) {
     margin-right: 0;
   }
-  /* line 532, ../sass/layouts/_responsive.scss */
+  /* line 472, ../sass/layouts/_responsive.scss */
   #page #main #content .view-twmplate-contact-us {
     float: right;
     width: 50%;
     margin-right: 0%;
     margin-left: -50%;
   }
-  /* line 536, ../sass/layouts/_responsive.scss */
+  /* line 476, ../sass/layouts/_responsive.scss */
   #page #main #content #block-webform-client-block-24 {
     float: left;
     width: 50%;
     margin-left: 0%;
     margin-right: -50%;
   }
-  /* line 540, ../sass/layouts/_responsive.scss */
+  /* line 480, ../sass/layouts/_responsive.scss */
   #page #main #content #block-views-twmplate-contact-us-block-1 {
     clear: right;
     float: right;
@@ -532,7 +460,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 546, ../sass/layouts/_responsive.scss */
+  /* line 486, ../sass/layouts/_responsive.scss */
   #page #main #content .view-twmplate-contact-us {
     clear: right;
     float: right;
@@ -540,7 +468,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 551, ../sass/layouts/_responsive.scss */
+  /* line 491, ../sass/layouts/_responsive.scss */
   #page #main #content #block-webform-client-block-24 {
     clear: right;
     float: right;
@@ -548,7 +476,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 556, ../sass/layouts/_responsive.scss */
+  /* line 496, ../sass/layouts/_responsive.scss */
   #page #main #content #block-views-twmplate-contact-us-block-1 {
     clear: right;
     float: right;
@@ -557,57 +485,26 @@ ul {
     margin-left: -100%;
   }
 
-  /* line 567, ../sass/layouts/_responsive.scss */
+  /* line 507, ../sass/layouts/_responsive.scss */
   .region-bottom #block-block-1 .footer-wrape {
     text-align: center;
   }
-  /* line 571, ../sass/layouts/_responsive.scss */
+  /* line 511, ../sass/layouts/_responsive.scss */
   .region-bottom #block-block-1 .footer-wrape #footer_right div {
     display: inline-block;
   }
-
-  /* line 579, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 {
-    bottom: 0px;
-    width: 100%;
-  }
-  /* line 582, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape {
-    max-width: 1200px;
-    margin: 0 auto;
-    bottom: 20px;
-  }
-  /* line 586, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_left {
-    padding-left: 25px;
-    position: absolute;
-    left: 0;
-  }
-  /* line 591, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right {
-    position: absolute;
-    right: 0;
-  }
-  /* line 594, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right div {
-    display: inline-block;
-    float: left;
-    box-sizing: border-box;
-    padding-left: 15px;
-  }
-  /* line 599, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right div a {
-    margin-right: 20px;
-    margin-left: 5px;
-  }
 }
 @media all and (min-width: 481px) and (max-width: 767px) {
-  /* line 616, ../sass/layouts/_responsive.scss */
+  /* line 526, ../sass/layouts/_responsive.scss */
   .front #content-top .company-block {
     display: none;
   }
+  /* line 530, ../sass/layouts/_responsive.scss */
+  .front #content-top .content-top-footer .icon-menu {
+    padding-top: 0px !important;
+  }
 
-  /* line 626, ../sass/layouts/_responsive.scss */
+  /* line 541, ../sass/layouts/_responsive.scss */
   #header .header-wrape #logo {
     position: absolute;
     left: 50% !important;
@@ -617,42 +514,19 @@ ul {
     transform: translate(-50%, -50%) !important;
   }
 
-  /* line 631, ../sass/layouts/_responsive.scss */
+  /* line 546, ../sass/layouts/_responsive.scss */
   #content-top {
     position: relative;
   }
-  /* line 635, ../sass/layouts/_responsive.scss */
+  /* line 550, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-3 img {
     margin-top: 110px;
   }
-  /* line 640, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-  }
-  /* line 644, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  /* line 650, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
-    margin-top: 10px;
-  }
-  /* line 652, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0px 10px;
-  }
-  /* line 661, ../sass/layouts/_responsive.scss */
+  /* line 557, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-2 {
     overflow: hidden;
   }
-  /* line 663, ../sass/layouts/_responsive.scss */
+  /* line 559, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-2 img {
     margin-left: -50%;
     max-width: 1600px;
@@ -660,12 +534,12 @@ ul {
     min-height: 320px;
   }
 
-  /* line 676, ../sass/layouts/_responsive.scss */
+  /* line 572, ../sass/layouts/_responsive.scss */
   #page #main #content {
     /*聯絡我們node*/
     /*地圖區塊*/
   }
-  /* line 682, ../sass/layouts/_responsive.scss */
+  /* line 578, ../sass/layouts/_responsive.scss */
   #page #main #content .view-lastest-news .view-content .views-row {
     width: 100%;
     margin-right: 2%;
@@ -676,7 +550,7 @@ ul {
   #page #main #content .view-lastest-news .view-content .views-row:nth-child(1n +1) {
     margin-right: 0;
   }
-  /* line 691, ../sass/layouts/_responsive.scss */
+  /* line 587, ../sass/layouts/_responsive.scss */
   #page #main #content .view-products .view-content .views-row {
     width: 49%;
     margin-right: 2%;
@@ -687,7 +561,7 @@ ul {
   #page #main #content .view-products .view-content .views-row:nth-child(2n) {
     margin-right: 0;
   }
-  /* line 698, ../sass/layouts/_responsive.scss */
+  /* line 594, ../sass/layouts/_responsive.scss */
   #page #main #content .view-twmplate-contact-us {
     clear: right;
     float: right;
@@ -695,7 +569,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 703, ../sass/layouts/_responsive.scss */
+  /* line 599, ../sass/layouts/_responsive.scss */
   #page #main #content #block-webform-client-block-24 {
     clear: right;
     float: right;
@@ -703,7 +577,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 708, ../sass/layouts/_responsive.scss */
+  /* line 604, ../sass/layouts/_responsive.scss */
   #page #main #content #block-views-twmplate-contact-us-block-1 {
     clear: right;
     float: right;
@@ -712,39 +586,38 @@ ul {
     margin-left: -100%;
   }
 
-  /* line 719, ../sass/layouts/_responsive.scss */
+  /* line 615, ../sass/layouts/_responsive.scss */
   .region-bottom #block-block-1 .footer-wrape {
     width: 100%;
     text-align: center;
   }
-  /* line 724, ../sass/layouts/_responsive.scss */
+  /* line 620, ../sass/layouts/_responsive.scss */
   .region-bottom #block-block-1 .footer-wrape #footer_right div {
     display: inline-block;
   }
 
-  /* line 732, ../sass/layouts/_responsive.scss */
-  #footer #footer_right {
-    margin-top: 10px;
-    margin-left: 45px;
+  /* line 628, ../sass/layouts/_responsive.scss */
+  .footer-wrapper .copyright {
+    float: none !important;
+    text-align: center;
   }
-  /* line 735, ../sass/layouts/_responsive.scss */
-  #footer #footer_right div {
-    display: inline-block;
-    box-sizing: border-box;
-  }
-  /* line 738, ../sass/layouts/_responsive.scss */
-  #footer #footer_right div a {
-    display: inline-block;
-    margin-right: 25px;
+  /* line 632, ../sass/layouts/_responsive.scss */
+  .footer-wrapper .icon-menu {
+    float: none !important;
+    text-align: center;
   }
 }
 @media all and (max-width: 480px) {
-  /* line 753, ../sass/layouts/_responsive.scss */
+  /* line 645, ../sass/layouts/_responsive.scss */
   .front #content-top .company-block {
     display: none;
   }
+  /* line 649, ../sass/layouts/_responsive.scss */
+  .front #content-top .content-top-footer .icon-menu {
+    padding-top: 0px !important;
+  }
 
-  /* line 763, ../sass/layouts/_responsive.scss */
+  /* line 660, ../sass/layouts/_responsive.scss */
   #header .header-wrape #logo {
     position: absolute;
     left: 50% !important;
@@ -754,34 +627,11 @@ ul {
     transform: translate(-50%, -50%) !important;
   }
 
-  /* line 771, ../sass/layouts/_responsive.scss */
+  /* line 668, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-3 img {
     margin-top: 45px;
   }
-  /* line 776, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-  }
-  /* line 780, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  /* line 786, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right {
-    margin-top: 10px;
-  }
-  /* line 788, ../sass/layouts/_responsive.scss */
-  #content-top .content-top-wrape #block-block-1 .footer-wrape #footer_right div {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0px 10px;
-  }
-  /* line 798, ../sass/layouts/_responsive.scss */
+  /* line 676, ../sass/layouts/_responsive.scss */
   #content-top .content-top-wrape #block-imageblock-2 img {
     margin-left: -150%;
     max-width: 1600px;
@@ -789,13 +639,13 @@ ul {
     min-height: 320px;
   }
 
-  /* line 811, ../sass/layouts/_responsive.scss */
+  /* line 689, ../sass/layouts/_responsive.scss */
   #page #main #content {
     padding: 0px 20px;
     /*聯絡我們node*/
     /*地圖區塊*/
   }
-  /* line 818, ../sass/layouts/_responsive.scss */
+  /* line 696, ../sass/layouts/_responsive.scss */
   #page #main #content .view-lastest-news .view-content .views-row {
     width: 100%;
     margin-right: 6%;
@@ -806,7 +656,7 @@ ul {
   #page #main #content .view-lastest-news .view-content .views-row:nth-child(1n +1) {
     margin-right: 0;
   }
-  /* line 828, ../sass/layouts/_responsive.scss */
+  /* line 706, ../sass/layouts/_responsive.scss */
   #page #main #content .view-products .view-content .views-row {
     width: 100%;
     margin-right: 2%;
@@ -817,7 +667,7 @@ ul {
   #page #main #content .view-products .view-content .views-row:nth-child(1n) {
     margin-right: 0;
   }
-  /* line 835, ../sass/layouts/_responsive.scss */
+  /* line 713, ../sass/layouts/_responsive.scss */
   #page #main #content .view-twmplate-contact-us {
     clear: right;
     float: right;
@@ -825,7 +675,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 840, ../sass/layouts/_responsive.scss */
+  /* line 718, ../sass/layouts/_responsive.scss */
   #page #main #content #block-webform-client-block-24 {
     clear: right;
     float: right;
@@ -833,7 +683,7 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 845, ../sass/layouts/_responsive.scss */
+  /* line 723, ../sass/layouts/_responsive.scss */
   #page #main #content #block-views-twmplate-contact-us-block-1 {
     clear: right;
     float: right;
@@ -841,43 +691,21 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
   }
-  /* line 851, ../sass/layouts/_responsive.scss */
+  /* line 729, ../sass/layouts/_responsive.scss */
   #page #main #content .node-about-us img {
     width: 100%;
     margin: 0px !important;
   }
 
-  /* line 861, ../sass/layouts/_responsive.scss */
-  .region-bottom #block-block-1 .footer-wrape {
+  /* line 738, ../sass/layouts/_responsive.scss */
+  .footer-wrapper .copyright {
+    float: none !important;
     text-align: center;
   }
-  /* line 865, ../sass/layouts/_responsive.scss */
-  .region-bottom #block-block-1 .footer-wrape #footer_right div {
-    display: inline-block;
-  }
-
-  /* line 873, ../sass/layouts/_responsive.scss */
-  #footer span {
-    white-space: nowrap;
-  }
-  /* line 877, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape {
+  /* line 742, ../sass/layouts/_responsive.scss */
+  .footer-wrapper .icon-menu {
+    float: none !important;
     text-align: center;
-  }
-  /* line 880, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right {
-    margin-top: 10px;
-    margin-left: 45px;
-  }
-  /* line 883, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right div {
-    display: inline-block;
-    box-sizing: border-box;
-  }
-  /* line 886, ../sass/layouts/_responsive.scss */
-  #footer #block-multiblock-1 .footer-wrape #footer_right div a {
-    display: inline-block;
-    margin-right: 25px;
   }
 }
 /* Component (SMACSS module) rules */

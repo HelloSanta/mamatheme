@@ -24,6 +24,8 @@
 
             $(document).ready(function() {
 
+
+
                 $(".not-logged-in").addClass("animated fadeIn");
                 //$("#country-taiwan").html('<a class="language-link active" xml:lang="zh-hant" href="/zh-hant">繁體中文</a>');
                 //$("#country-japan").html('<a class="language-link" xml:lang="ja" href="/jp">日本語</a>');
@@ -36,6 +38,8 @@
                 $(".menu-block-1 ul li:nth-last-child(1)").html($(".ja").html());
 
                 $(".view-products .views-row ,.view-lastest-news .views-row").addClass("animated fadeIn");
+
+                $(".icon-none").html("<p>jquery</p>");
 
                 $(window).unload(function() {
                     $(".view-products .views-row ,.view-lastest-news .views-row").addClass("animated fadeOut");
@@ -84,13 +88,17 @@
 
 
 
-
             var wrapperclass = "#block-views-template-slideshow-block";
             var itemclass = ".views-row";
 
-            $(wrapperclass + " " + itemclass).css({
-                'height': $(window).height()
-            });
+            $(document).ready(function() {
+                var x = $(".content-top-footer").height();
+                $(wrapperclass + " " + itemclass).height($(window).height() - x);
+                $(window).resize(function () {
+         $(wrapperclass + " " + itemclass).height($(window).height() - x);
+    });
+            })
+            
             $("#block-views-template-slideshow-block .views-row img").css("opacity", "0");
             //$(wrapperclass + " " + "img").css("margin", "-500px");
             $(wrapperclass + " " + itemclass).css({
@@ -143,20 +151,20 @@
 
 
             //for 視差
-            var vb = $("#block-imageblock-2 img").attr("src");
-            $('#block-imageblock-2').parallax({
+            var vb = $(".banner-block img").attr("src");
+            $('.banner-block').parallax({
                 imageSrc: vb
             });
-            $("#block-imageblock-2 img").css("opacity", "0");
-
-
-
-
+            $(".banner-block img").css("opacity", "0");
         }
     };
 
 
-
+    $(document).ready(function() {
+        $("#webform-client-form-24").submit(function() {
+            $(".form-actions").html("<p>loading.......</p>");
+        });
+    });
 
 
 
