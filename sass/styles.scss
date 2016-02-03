@@ -105,8 +105,20 @@
     }
 }
 
-
-
+@mixin responsive-width($pc, $pad, $small-pad, $phone) {
+    @include pc-width {
+        width: $pc;
+    }
+    @include pad-width {
+        width: $pad;
+    }
+    @include small-pad-width {
+        width: $small-pad;
+    }
+    @include phone-width {
+        width: $phone;
+    }
+}
 
 html {}
 
@@ -310,10 +322,9 @@ a:focus {
 
 //首頁背景圖
 .front {
-
     .footer-wrapper {
-            display: none!important;
-        }
+        display: none!important;
+    }
     // background: url("/sites/default/files/home.jpg") no-repeat fixed;
     // background-position: center;
     // -webkit-background-size: cover;
@@ -328,11 +339,8 @@ a:focus {
         .company-block {
             margin: 0px;
             //position: absolute;
-            bottom: 0px!important;
-            left: 0px;
             width: 100%;
-            z-index: 200;
-            background: rgba(0, 0, 0, 0.5);
+            background: #000000;
             box-sizing: border-box;
             //padding: 0px 15px;
             .wrapper {
@@ -371,24 +379,52 @@ a:focus {
             }
         }
         //首頁footer區塊
-        
         .content-top-footer {
             background: #000000;
-            .region-content-footer {
+            .content-footer-menu {
                 width: 100%!important;
-                .copyright {
-                    position: relative!important;
-                    @include responsive-float(left, none, none, none);
-                    margin: 0px;
-                    padding: 10px 15px;
-                }
-                .icon-menu {
-                    position: relative!important;
-                    //@include responsive-float(right, none, none, none);
-                    //display: none;
-                    margin: 0px;
-                    padding: 10px 15px;
-                    text-align: center;
+                background: #3F3F3F;
+                .region-content-footer-menu {
+                    max-width: 1440px;
+                    margin: 0 auto;
+                    display: -webkit-flex;
+                    display: -ms-flex;
+                    display: flex;
+                    -webkit-justify-content: space-between;
+                    -ms-justify-content: space-between;
+                    justify-content: space-between;
+                    -webkit-align-items: center;
+                    -webkit-flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    .copyright {
+                        position: relative!important;
+                        //@include responsive-float(left, none, none, none);
+                        @include responsive-width(auto, auto, 100%, 100%);
+                        text-align: center;
+                        margin: 0px;
+                        padding: 10px 15px;
+                        box-sizing: border-box;
+                        line-height:35px;
+                    }
+                    .icon-menu {
+                        position: relative!important;
+                        //@include responsive-float(right, none, none, none);
+                        //display: none;
+                        margin: 0px;
+                        padding: 10px 15px;
+                        @include responsive-width(auto, auto, 100%, 100%);
+                        text-align: center!important;
+                        .menu {
+                            li.menu__item {
+                                display: inline-block;
+                                a {
+                                    padding: 10px;
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -500,11 +536,11 @@ body {
                 z-index: 200;
                 width: 100%;
                 .region-content-footer {
-                    max-width: 1440px;
-                    width: 100%;
+                    //max-width: 1440px;
+                    //width: 100%;
                     margin: 0 auto;
                     box-sizing: border-box;
-                    padding: 0 30px;
+                    //padding: 0 30px;
                     #block-block-1 {
                         @include responsive-text-align(left, center, center, center);
                     }

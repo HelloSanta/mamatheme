@@ -47,7 +47,15 @@
     <?php print render($page['header']); ?>
 </div>
   </header>
-<div id="content-top"><div class="content-top-wrape"><?php print render($page['content-top']); ?><div class="content-top-footer"><?php print render($page['content-footer']); ?></div></div></div>
+<div id="content-top">
+<div class="content-top-wrape">
+<?php print render($page['content-top']); ?>
+<div class="content-top-footer">
+<?php print render($page['content-footer']); ?>
+<div class ="content-footer-menu"><?php print render($page['content-footer-menu']); ?></div>
+</div>
+</div>
+</div>
 
 <div id="page">
 
