@@ -177,9 +177,9 @@
             $('.fixed-company').css({
                 "position": "fixed",
                 "width": "100%",
-                "height": company_height,
-                "top": header_height,
-                "z-index": "300",
+                "height": $(window).height(),
+                //"top": header_height,
+                "z-index": "900",
                 "background": "rgba(0,0,0,0.8)",
             });
 
