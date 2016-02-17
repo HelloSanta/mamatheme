@@ -94,11 +94,11 @@
             $(document).ready(function() {
                 var x = $(".content-top-footer").height();
                 $(wrapperclass + " " + itemclass).height($(window).height() - x);
-                $(window).resize(function () {
-         $(wrapperclass + " " + itemclass).height($(window).height() - x);
-    });
+                $(window).resize(function() {
+                    $(wrapperclass + " " + itemclass).height($(window).height() - x);
+                });
             })
-            
+
             $("#block-views-template-slideshow-block .views-row img").css("opacity", "0");
             //$(wrapperclass + " " + "img").css("margin", "-500px");
             $(wrapperclass + " " + itemclass).css({
@@ -164,7 +164,52 @@
         $("#webform-client-form-24").submit(function() {
             $(".form-actions").html("<p>loading.......</p>");
         });
+
+
+
+        //code for company fixed-----------------
+        function company_fixed() {
+            var header_height = $('.mean-bar').height() + $('#header').innerHeight();
+            var footer_height = $('.content-top-footer').innerHeight();
+            var company_height = $(window).height() - header_height - footer_height;
+            $('.front').prepend("<div class ='fixed-company'></div>");
+            $('.fixed-company').html($(".company-block").html());
+            $('.fixed-company').css({
+                "position": "fixed",
+                "width": "100%",
+                "height": company_height,
+                "top": header_height,
+                "z-index": "300",
+                "background": "rgba(0,0,0,0.8)",
+            });
+
+            function company_hide() {
+                $('.fixed-company').fadeOut('slow');
+            }
+            setTimeout(company_hide, 3000);
+        }
+
+
+
+        $(document).ready(function() {
+            if ($(window).width() < 767) {
+                company_fixed();
+            };
+        });
+
+        
+
+      
+
+
+
+
     });
+
+
+
+
+
 
 
 

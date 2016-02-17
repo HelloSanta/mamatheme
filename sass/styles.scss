@@ -9,8 +9,6 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 
-
-
 @import "init";
 
 /* HTML element (SMACSS base) rules */
@@ -322,6 +320,38 @@ a:focus {
     }
 }
 
+.fixed-company {
+    box-sizing:border-box;
+    padding:20px;
+    .wrapper {
+        height: 100%;
+        ul {
+            height: 100%;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            -ms-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            position: relative;
+            .item-list {
+                display: inline-block;
+                width: 50%;
+                img{
+                    box-sizing:border-box;
+                    padding:20px;
+                }
+            }
+        }
+    }
+}
+
 //首頁背景圖
 .front {
     .footer-wrapper {
@@ -417,7 +447,7 @@ a:focus {
                         //display: none;
                         margin: 0px;
                         padding: 2px 15px;
-                        font-size:15px;
+                        font-size: 15px;
                         @include responsive-width(auto, auto, 100%, 100%);
                         text-align: center!important;
                         .menu {
