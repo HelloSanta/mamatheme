@@ -382,6 +382,7 @@ a:focus {
         .content-top-footer {
             background: #000000;
             .content-footer-menu {
+                border-top: 6px solid rgba(255, 255, 255, 0.6);
                 width: 100%!important;
                 background: #3F3F3F;
                 .region-content-footer-menu {
@@ -397,22 +398,23 @@ a:focus {
                     -webkit-flex-wrap: wrap;
                     -ms-flex-wrap: wrap;
                     flex-wrap: wrap;
+                    font-size: 12px;
                     .copyright {
                         position: relative!important;
                         //@include responsive-float(left, none, none, none);
                         @include responsive-width(auto, auto, 100%, 100%);
                         text-align: center;
                         margin: 0px;
-                        padding: 10px 15px;
+                        padding: 2px 15px;
                         box-sizing: border-box;
-                        line-height:35px;
+                        line-height: 35px;
                     }
                     .icon-menu {
                         position: relative!important;
                         //@include responsive-float(right, none, none, none);
                         //display: none;
                         margin: 0px;
-                        padding: 10px 15px;
+                        padding: 2px 15px;
                         @include responsive-width(auto, auto, 100%, 100%);
                         text-align: center!important;
                         .menu {
