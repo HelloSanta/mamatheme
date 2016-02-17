@@ -186,7 +186,7 @@
             function company_hide() {
                 $('.fixed-company').fadeOut('slow');
             }
-            setTimeout(company_hide, 3000);
+            setTimeout(company_hide, 5000);
         }
 
 
